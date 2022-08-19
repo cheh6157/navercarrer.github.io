@@ -1,0 +1,143 @@
+/* 공통 영역 */
+
+body{
+    position: relative;
+    /* min-width: 1229px; */
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+    font-family: 'TThoves','nanum', sans-serif;
+}
+
+.blind{
+    position: absolute;
+    width: 1px;height: 1px;
+    overflow: hidden;
+    clip: (0 0 0 0);
+    margin: -1px;
+}
+
+.common-inner{
+    position: relative;
+    padding: 0 104px;
+    margin: 0 auto;
+    max-width: 1408px;
+    /* min-width: 1230px; */
+    box-sizing: border-box;
+}
+/* gnb-item a */
+.gnb-area .gnb-item a{
+    display: block;
+    padding: 0 10px;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.36px;
+}
+
+
+
+/* sc 제목, 글 영역 */
+.sc-title{
+    font-size: 64px;
+    line-height: 71px;
+    letter-spacing: -0.64px;
+    margin-bottom: 20px;
+}
+.sc-desc{
+    display: inline;
+    vertical-align: middle;
+    padding-right: 30px;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: -0.44px;
+    font-weight: bold;
+}
+
+/* link-more */
+.link-more{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    letter-spacing: -0.36px;
+}
+.link-more::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #000;
+}
+/* sp-img */
+.header .logo a,
+.sc-search .ic-search,
+.sc-teams .title-area .number::after,
+.sc-apply .link-apply .ap-text::after,
+.control-box > *
+{
+    background: url(../images/icon/sp-img.png);
+    background-size: 328px 205px;
+}
+
+.side-menu .gnb-area .team::after,
+.mb-search .icon-search::after
+{
+    background-image: url(../images/icon/msp-img.png);
+    background-size: 195px 181px;
+}
+
+
+
+.control-box{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    right: 0%;
+    cursor: pointer;
+}
+.button-prev{
+    content: '';
+    background-position: -187px -172px;
+    height: 32px;
+    width: 33px;
+    margin-right: 5px;
+}
+.button-next{
+    content: '';
+    right: 15px;
+    background-position: -113px -172px;
+    width: 32px;
+    height: 32px;
+    width: 33px;
+}
+/* 오퍼시티로 색바꾸는거 수정 swiper-button-disabled */
+.control-box .button-prev.swiper-button-disabled,
+.control-box .button-next.swiper-button-disabled{
+    opacity: 0.5;
+}
+
+
+/* 반응형 */
+@media screen and (max-width: 1100px) {
+    .header .logo a
+    {
+        /* 모바일 스프라이트 이미지 저장 후 새로운 좌표 추가 */
+        background: url(../images/icon/msp-img.png);
+        background-size: 195px 181px;
+    }
+    .common-inner{
+        padding: 0 22px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    /* *768을보고 잡아야함 */
+   
+}
+
+@media screen and (max-width: 767px) {
+    /* *320을 보고 잡아야함 */
+  
+}

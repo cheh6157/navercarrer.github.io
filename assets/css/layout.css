@@ -1,0 +1,325 @@
+@import './font.css';
+@import './reset.css';
+@import './common.css';
+
+
+/* header */
+.header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1020;
+}
+.header.hover::before{
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    height: 200px;
+    background: #fff;
+    content: '';
+}
+.header .inner{
+    position: static;
+    display: flex;
+    height: 64px;
+    max-width: 1920px;
+    min-width: 320px;
+    width: 100%;
+    padding: 0 104px 0 98px;
+    margin: 0 auto;
+    -webkit-box-sizing: border-box;
+}
+.header .logo{
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.header .logo a{
+    content: '';
+    display: block;
+    background-position: -105px 0px;
+    width: 223px;
+    height: 35px;
+}
+.header .gnb-area{
+    display: flex;
+    margin-left: 29px;
+    position: relative;
+}
+.header .gnb-list{
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.header .gnb-item{
+    display: flex;
+    align-items: center;
+    height: 100%;
+} 
+.header .gnb-item .sub-menu{
+    display: none;
+    position: absolute;
+    top: 64px;
+    width: 100%;
+}
+.header .gnb-item .sub-menu.active{
+    display: block;
+}
+.header .gnb-item > a{
+    display: block;
+    padding: 0 10px;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.36px;
+}   
+
+.header .util-area{
+    display: flex;
+    margin-left: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.header .util-area > a{
+    display: block;
+    padding: 0 10px;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.36px;
+}
+.header .btn-menu{
+    display: none;
+}
+.header .btn-close{
+    display: none;
+}
+.header .side-menu{
+    position: fixed;
+    top: 60px;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.3s;
+    background: #fff;
+    z-index: 1010;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer{
+    background-color: #f2f2f2;
+    padding-bottom: 50px;
+}
+.footer .inner{
+    display: flex;
+    width: 100%;
+    max-width: 1920px;
+    padding: 25px 104px 25px 98px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    align-items: center;
+}
+.footer .text-box{
+    flex: 1;
+    display: flex;
+}
+
+.footer .text-box .copy{
+    margin-top: 2px;
+}
+.footer .text-box .policy{
+    margin-left: 20px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.28px;
+    color: #909090;
+    font-weight: bold;
+}
+.footer .select-box{}
+.footer select{
+    width: 280px;
+    padding: 10px 0;
+    border: 0;
+    outline: none;
+    background:#f2f2f2;
+    border-bottom: 2px solid #000;
+}
+
+
+/* 반응형 */
+
+@media screen and (max-width: 1100px) {
+    /* *1024을 기준으로 화면을 보고 잡아야함 */
+    .header .inner{padding: 0 22px;}
+    .footer .inner{padding: 25px 22px;}
+}
+@media screen and (max-width: 1023px) {
+    /* *768을보고 잡아야함 */
+    .header .column-left{display: none;}
+    .header .gnb-list{display: none;}
+    .header .btn-menu{display: block;}
+
+    .header .logo a{
+    /* 포지션과 좌표 만 넣어주기 */
+    background-position: 0px 0px;
+    width: 160px;
+    height: 23px;
+    }
+    .header .btn-menu.active{
+        display: block;
+        border: 0;
+        outline: none;
+        background-image: url(../images/icon/msp-img.png);
+        background-size: 195px 181px;
+        background-position: -85px -28px;
+        width: 20px;
+        height: 14px;
+        background-color:#fff;
+        cursor: pointer;
+    }
+    .header .btn-menu{
+        display: none;
+    }
+    .header .btn-close{
+        display: none;
+    }
+    .header .btn-close.active{
+        display: block;
+        border: 0;
+        outline: none;
+        background-image: url(../images/icon/msp-img.png);
+        background-size: 195px 181px;
+        background-position: -85px -49px;
+        width: 15px;
+        height: 15px;
+        background-color:#fff;
+        cursor: pointer;
+    }
+    .header .side-menu{
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        transition: 0.3s;
+        background: #fff;
+        z-index: 1010;
+    }
+    .header .side-menu.active{
+        right: 0;
+    }
+    .header .side-menu .gnb-area{
+        display: block;
+        margin-left: 0;
+    }
+    .side-menu .gnb-list{
+        display: block;
+        padding: 11px 0 9px;
+    }
+    .side-menu .gnb-item{
+        padding: 0 20px;
+    }
+    .side-menu .gnb-area a{
+        font-size: 22px;
+        line-height: 46px;
+        letter-spacing: -0.44px;
+    }
+    .side-menu .gnb-area .team::after{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        margin: 20px 0 0 4px;
+        background-position: -136px -49px;
+        width: 10px;
+        height: 6px;
+    }
+    .side-menu .gnb-item .sub-list{
+        display: block;
+        padding: 3px 22px 15px;
+        display: none;
+    }
+    .side-menu .gnb-item .sub-item{
+        padding-left: 20px;
+        font-size: 18px;
+        line-height: 40px;
+        letter-spacing: -0.36px;
+        background-color: #fff;
+        font-weight: normal;
+    }
+    .header .side-menu .util-area{
+        display: block;
+        margin-left: 10px;
+    }
+    .side-menu .util-list{
+        display: block;
+        padding: 11px 0 9px;
+    }
+    .side-menu .util-item{
+        display: block;
+        padding: 0 22px;
+    }
+    .side-menu .util-area a{
+        display: block;
+        font-size: 22px;
+        line-height: 46px;
+        letter-spacing: -0.44px;
+    }
+    .side-menu .lang-area{
+        margin-left: 29px;
+    }
+    .side-menu .lang-list{
+        padding-top: 19px;
+        position: relative;
+        padding: 10px 0 11px;
+    }
+    .side-menu .lang-item{
+        margin-bottom: 9px;
+        font-size: 18px;
+        letter-spacing: -0.36px;
+        line-height: 28px;
+    }
+    .side-menu .lang-item a::before{
+        content: "";
+        margin: 8px 10px 0 0;
+        display: inline-block;
+        vertical-align: top;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 1px solid #d0d0d0;
+    }
+    .footer .inner{
+        display: block;
+    }
+    .footer .text-box{
+        padding: 0 0 20px 0;
+    }
+    .footer select{
+        width: 100%;
+        padding: 10px 0;
+        border: 0;
+        outline: none;
+        background:#f2f2f2;
+        border-bottom: 2px solid #b4b4b4;
+}
+}
+
+@media screen and (max-width: 767px) {
+    /* *320을 보고 잡아야함 */
+  
+}

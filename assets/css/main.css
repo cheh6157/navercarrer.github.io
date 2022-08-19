@@ -1,0 +1,461 @@
+.container{overflow: hidden;}
+/* 슬라이드 넘치는 부분을 지우기 위해 껍데기 부분에 overflow: hidden 을 준다 */
+.sc-mainslide .swiper-slide{height: 544px;}
+.sc-mainslide video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: -0.8px;
+    overflow: hidden;
+    font-size: 100px;
+    line-height: 1.2;
+    letter-spacing: -2.4px;
+    font-weight: 800;
+    white-space: nowrap;
+    color: #fff;
+    text-shadow: 6px 6px 18px rgb(0 0 0 / 16%);
+    animation: fade-out 0.2s linear forwards;
+    padding: 20px;
+    -webkit-box-sizing: border-box;
+}
+
+/* sc-search */
+.sc-search{
+    position: absolute;
+    top: -27px;
+    left:104px;
+    right: 105px;
+    z-index: 1000;
+    font-size: 0;
+    background-color: #fff;
+}
+.sc-search fieldset{
+    display: flex;
+}
+.sc-search .ic-search{
+    content: '';
+    display: block;
+    background-position: -245px -40px;
+    width: 18px;
+    height: 18px;
+    margin: 18px 18px 18px 18px;
+}
+.sc-search .keyword-box{
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+    align-items: center;
+    font-weight: bold;
+}
+.sc-search .search-keyword{
+    margin-right: 9px;
+    white-space: nowrap;
+    color: #000;
+}
+.sc-search .keyword{
+    flex: 1;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 54px;
+    font-family: 'TThoves','nanum', sans-serif;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+.sc-search .selec-box{
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+    align-items: center;
+    font-weight: bold;
+}
+.sc-search .selec-box .selec-word{
+    font-size: 14px;
+    line-height: 54px;
+    color: #000;
+    font-weight: bold;
+}
+.sc-search .selec-box .selec-inner{
+    position: relative;
+    flex: 1;
+}
+.sc-search .selec-box select{
+    position: relative;
+    flex: 1;
+    width: 100%;
+    padding: 3px 25px 0 9px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 54px;
+    letter-spacing: -0.3px;
+    text-align: left;
+    color: #d0d0d0;
+    border: 0;
+    outline: none;
+}
+.sc-search .selec-box option{
+    color: #000;
+}
+.sc-search .btn-box{
+    display: inline-block;
+    vertical-align: top;
+}
+.sc-search .btn-box .btn-search{
+    width: 98px;
+    height: 54px;
+    line-height: 54px;
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+    border: 0;
+    outline: none;
+}
+.sc-search .btn-box .btn-search:hover{
+    background-color: #16ef72;
+}
+
+/* sc-teams */
+.sc-teams{}
+.sc-teams .group-title{
+    padding-top: 126px;
+}
+.sc-teams .group-content{
+    margin-top: 70px;
+}
+.sc-teams .teams-list{}
+.sc-teams .teams-item{}
+.sc-teams .teams-item:hover{
+    background-color: #ebebeb;
+}
+.sc-teams .item-inner{
+    display: block;
+    color: #000;
+}
+.sc-teams .title-area{
+    padding: 20px 0;
+    display: inline-block;
+    vertical-align: top;
+    width: 49.5%;
+}
+.sc-teams .title-area .title{
+    display: inline-block;
+    vertical-align: top;
+    font-size: 38px;
+    line-height: 60px;
+    letter-spacing: -0.34px;
+    font-weight: normal;
+}
+.sc-teams .title-area .number{
+    margin-top: 13px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 18px;
+    font-size: 15px;
+    letter-spacing: -0.3px;
+}
+.sc-teams .title-area .number::after{
+    content: "";
+    position: absolute;
+    top: -1px;
+    right: -14px;
+    background-position: -176px -105px;
+    width: 9px;
+    height: 9px;
+}
+.sc-teams .txt-area{
+    display: inline-block;
+    width: 49.5%;
+    padding: 20px 0 20px 0px;
+    font-size: 22px;
+    line-height: 60px;
+    letter-spacing: -0.44px;
+}
+/* sc-people */
+.sc-people{
+    position: relative;
+    padding: 95px 0 0;
+}
+.sc-people .swiper{
+    position: relative;
+    margin-top: 60px;
+    padding-bottom: 70px;
+    overflow: initial;
+}
+.sc-people .swiper-wrapper{}
+.sc-people .control-box{
+    display: flex;
+    position: absolute;
+    top: 95%;
+    right: 0%;
+    cursor: pointer;
+}
+.sc-people .button-prev{
+    content: '';
+    background-position: -187px -172px;
+    height: 32px;
+    width: 33px;
+    margin-right: 5px;
+}
+.sc-people .button-next{
+    content: '';
+    right: 15px;
+    background-position: -113px -172px;
+    width: 32px;
+    height: 32px;
+    width: 33px;
+}
+/* 오퍼시티로 색바꾸는거 수정 swiper-button-disabled */
+.sc-people .button-prev.swiper-button-disabled,
+.sc-people .button-next.swiper-button-disabled{
+    opacity: 0.5;
+}
+
+.sc-people .swiper-slide{width: 100%;}
+.sc-people .swiper-slide .img-box{
+
+}
+.sc-people .img-box a{
+    display: block;
+    height: 100%;
+    padding-bottom: 100%;
+    padding-bottom: 47.403%;
+    /* 화면비 계산 , 유동적 높이를 가지는 블록영역을 만들때 씀 */
+    position: relative;
+}
+.sc-people .img-box a img{
+    position: absolute;
+    /* 유동적인 영역이 기준이고 해당이미지가 앱솔루트로 고정 */
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sc-people .text-box{
+    margin-top: 29px;
+}
+.sc-people .link-more{
+    margin-top: 4px;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: normal;
+    letter-spacing: -0.36px;
+}
+.sc-people .text-box .refer-box{
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 24px;
+    letter-spacing: -0.28px;
+    color: #000;
+}
+.sc-people .refer-box .refer{
+    display: inline-block;
+    vertical-align: top;
+}
+.sc-people .refer-box .name{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 12px;
+}
+.sc-people .refer-box .name::before{
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 6px;
+    width: 1px;
+    height: 10px;
+    background-color: #000;
+}
+/* sc-benefits */
+.sc-benefits{
+    padding: 112px 0 0;
+}
+.sc-benefits .swiper{
+    position: relative;
+    margin: 55px 0 0;
+    padding-bottom: 80px;
+    overflow: hidden;
+}
+.sc-benefits .swiper-wrapper{}
+.sc-benefits .swiper-slide{}
+.sc-benefits .swiper-slide .bf-inner{
+    display: block;
+    height: 100%;
+}
+.sc-benefits .img-box a{
+    display: block;
+    height: 100%;
+    padding-bottom: 100%;
+    /* 화면비 계산 , 유동적 높이를 가지는 블록영역을 만들때 씀 */
+    position: relative;
+}
+.sc-benefits .img-box a img{
+    position: absolute;
+    /* 유동적인 영역이 기준이고 해당이미지가 앱솔루트로 고정 */
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sc-benefits .swiper-slide .text-box{
+    width: 100%;
+    overflow: hidden;
+    margin-top: 29px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+}
+.sc-benefits .text-box .bf-text{
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.36px;
+    color: #000;
+}
+
+/* apply-area */
+.sc-apply{
+    padding: 95px 0 102px;
+}
+.sc-apply .link-apply{
+    display: block;
+    vertical-align: top;
+    margin-top: 18px;
+}
+.sc-apply .link-apply .ap-text::after{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 11px;
+    background-position: -76px -172px;
+    width: 32px;
+    height: 32px;
+    width: 33px;
+}
+
+@media screen and (max-width: 1100px) {
+    /* *1024을 기준으로 화면을 보고 잡아야함 */
+    .sc-benefits .text-box .bf-text br{
+        display: none;
+    }
+    .slide-text{
+        font-size: 9vw;
+    }
+}
+@media screen and (max-width: 1023px) {
+    /* *768을보고 잡아야함 */
+    .sc-search{display: none;}
+    .mb-search{
+        position: relative;
+        display: block;
+        background-color: #ebebeb;
+        border-bottom: 0;
+        margin-top: 22px;
+    }
+    .mb-search .btn-job{
+        width: 100%;
+        padding: 10px 45px 10px 10px;
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.28px;
+        color: #696868;
+        font-weight: bold;
+        -webkit-box-sizing: border-box;
+        border: 0;
+        outline: none;
+        text-align: left;
+    }
+    .mb-search .icon-search{
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 12px 10px 11px;
+    }
+    .mb-search .icon-search::after{
+        display: block;
+        content: '';
+        background-position: -140px -125px;
+        width: 19px;
+        height: 19px;
+    }
+    .sc-teams .item-inner{
+        display: block;
+        color: #000;
+    }
+    .sc-teams .title-area{
+        display: block;
+        vertical-align: top;
+        width: 100%;
+    }
+    .sc-teams .title-area .title{
+        display: inline-block;
+        vertical-align: top;
+        font-size: 38px;
+        line-height: 38px;
+        letter-spacing: -0.34px;
+        font-weight: normal;
+    }
+    .sc-teams .title-area .number{
+        margin-top: 13px;
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 18px;
+        font-size: 15px;
+        letter-spacing: -0.3px;
+    }
+    .sc-teams .txt-area{
+        display: block;
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: -0.44px;
+    }
+   
+    .sc-people .img-box a img{
+        position: absolute;
+        /* 유동적인 영역이 기준이고 해당이미지가 앱솔루트로 고정 */
+        top: 0;left: 0;
+        width: 100%;
+        height: 200%;
+        object-fit: cover;
+    }
+    .sc-people .text-box{
+        margin-top: 280px;
+    }
+    .sc-benefits .img-box a{
+        display: block;
+        height: 100%;
+        padding-bottom: 100%;
+        /* 화면비 계산 , 유동적 높이를 가지는 블록영역을 만들때 씀 */
+        background: #f00;
+        position: relative;
+    }
+    .sc-benefits .img-box a img{
+        position: absolute;
+        /* 유동적인 영역이 기준이고 해당이미지가 앱솔루트로 고정 */
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    /* *320을 보고 잡아야함 */
+  
+}
